@@ -1,0 +1,16 @@
+{% extends 'user/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+ New Envelope
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+  <form method="POST" >
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-lg btn-info" type='submit' value='Enter'>Enter</button>
+  </form> 
+</div>  
+{% endblock content %}
